@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="1">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/HorizontalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/idInitialDate"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="@string/InitialDate" />
+
+            <Button
+                android:id="@+id/idFinalDate"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text="@string/FinalDate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/HorizontalLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HorizontalLayout"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <Switch
+                android:id="@+id/idRefreshswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_screen"
+                android:paddingTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textOff="@string/refresh_screen_off"
+                android:textOn="@string/refresh_screen_on" />
+
+            <Spinner
+                android:id="@+id/idVehiclespinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            tools:actionBarNavMode="standard"
+            tools:context=".MapsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/HorizontalLayout2">
+        </fragment>
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+
+
+
+

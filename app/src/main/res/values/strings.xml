@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Route</string>
+    <string name="title_activity_maps">Route</string>
+    <string name="InitialDate">Initial Date</string>
+    <string name="FinalDate">Final Date</string>
+    <string name="refresh_screen">Refresh Screen</string>
+    <string name="refresh_screen_off">OFF</string>
+    <string name="refresh_screen_on">ON</string>
+</resources>
